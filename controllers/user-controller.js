@@ -15,7 +15,7 @@ export const signup = async (req, res, next) => {
   if (exectinguser) {
     return res
       .status(400)
-      .json({ message: "User all ready exists! use Login" });
+      .json({ message: "User all ready exists!" });
   }
 
   const hashPassword = bcrypt.hashSync(password);
@@ -59,7 +59,7 @@ export const login = async (req, res, next) =>{
          return res.status(400).json({message:"Incorrect password"});
       }
       
-      return res.status(200).json({message:"Login Sucessfully",user:exectinguser});
+      return res.status(200).json({message:"Login Successfully",user:exectinguser});
 
        
 }

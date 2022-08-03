@@ -15,7 +15,7 @@ export const addBlog = async(req, res, next) => {
       }
 
       if(!exectinguser){
-        return res.status(400).json({message:"user Not Found"});
+        return res.status(400).json({message:"User Not Found"});
       }
 
       const blog = new Blog({
@@ -75,7 +75,7 @@ export const updateBlog = async (req, res, next) =>{
 
       if(!blog){
 
-         return res.status(500).json({message:"Unaable to update the blog"});
+         return res.status(500).json({message:"Unable to update the blog"});
       }
        
       return res.status(200).json({blog});
@@ -119,7 +119,7 @@ export const deleteBlogById = async (req,res,next) =>{
         return res.status(500).json({message:"Unable to Delete"});
      }
 
-     return res.status(200).json({message:"Sucessfully Delete"});
+     return res.status(200).json({message:"Delete successfull"});
 }
 
 export const userBlogs = async (req, res, next) => {
